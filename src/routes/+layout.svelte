@@ -4,4 +4,6 @@
 	import '../app.postcss';
 </script>
 
-<slot />
+<div class="overflow-x-hidden overflow-y-hidden">
+    <slot />
+</div>

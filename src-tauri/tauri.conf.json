@@ -7,7 +7,7 @@
     "distDir": "../build"
   },
   "package": {
-    "productName": "KotlinShuttle",
+    "productName": "kotlin_shuttle",
     "version": "0.1.0"
   },
   "tauri": {

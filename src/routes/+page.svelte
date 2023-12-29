@@ -1,15 +1,17 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script lang="ts">
+    import {CodeEditor, OutputPane, SideBar} from "$lib";
+</script>
 
-<div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
-	</div>
-</div>
+<main class="flex flex-row w-screen h-screen">
+    <div class="">
+        <SideBar />
+    </div>
+    <div class="w-full flex flex-row">
+        <div class="h-screen w-1/2 border-x-1 border-x-gray-700">
+            <CodeEditor />
+        </div>
+        <div class="h-screen w-1/2">
+            <OutputPane />
+        </div>
+    </div>
+</main>
