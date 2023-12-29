@@ -4,7 +4,7 @@
 
 
 
-<pre class="w-full h-full p-4 font-mono editor {$outputStore.error ? 'text-red-500' : ''}">
+<pre class="w-full h-full p-4 font-mono editor {$outputStore.error ? 'text-red-400' : ''}">
     {$outputStore.output}
 </pre>
 

@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: auto update the output">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/OutputPane.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/OutputPane.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +111,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703835743926</updated>
       <workItem from="1703835744797" duration="1238000" />
-      <workItem from="1703837060157" duration="18975000" />
+      <workItem from="1703837060157" duration="19493000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial commit">
       <option name="closed" value="true" />
@@ -185,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703856132600</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="feat: auto update the output">
+      <option name="closed" value="true" />
+      <created>1703857532912</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703857532912</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
