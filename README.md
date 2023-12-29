@@ -43,6 +43,8 @@ There are many configurations and options for this command. You can refer to the
 
 The app is pretty simple to use. You have a left pane for editing your code and a right pane for viewing the output. You can save the code from the left pane and run it using the run button. The output will be displayed on the right pane.
 
+**NOTE: ** Make sure to save the code before executing it.
+
 ## Binary
 
 You can also download the binary for your platform from the releases.
