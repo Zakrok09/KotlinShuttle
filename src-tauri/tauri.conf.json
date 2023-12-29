@@ -66,7 +66,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.tauri.dev",
+      "identifier": "com.zakrok09.kotlin-shuttle",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
