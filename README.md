@@ -12,6 +12,8 @@ A JetBrains-inspired GUI tool for local development of Kotlin.
 <i>This project is an internship submission for the JetBrains internships for 2024. Design and icon are inspired by JetBrains. </i>
 </h6>
 
+[present.webm](https://github.com/Zakrok09/KotlinShuttle/assets/31936449/95bf43bb-d19a-41b7-8ac8-dd6a4e6ce2e2)
+
 
 ## Installation
 
@@ -43,7 +45,7 @@ There are many configurations and options for this command. You can refer to the
 
 The app is pretty simple to use. You have a left pane for editing your code and a right pane for viewing the output. You can save the code from the left pane and run it using the run button. The output will be displayed on the right pane.
 
-**NOTE: ** Make sure to save the code before executing it.
+**NOTE:** Make sure to save the code before executing it.
 
 ## Binary
 
