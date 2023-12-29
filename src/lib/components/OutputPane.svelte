@@ -3,7 +3,7 @@
 </script>
 
 <textarea bind:value={output}
-          class="w-full h-full p-4 font-mono editor" />
+          class="w-full h-full p-4 font-mono editor" readonly />
 
 <style>
     .editor {

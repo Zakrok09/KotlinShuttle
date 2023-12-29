@@ -8,7 +8,7 @@
 </script>
 
 <textarea bind:value={code} on:input={handleInput}
-          class="w-full h-full p-4 font-mono editor" />
+          class="w-full h-full p-4 outline-none ring-0 font-mono editor" />
 
 <style>
     .editor {
