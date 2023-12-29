@@ -2,10 +2,22 @@
     import {BaseDirectory, writeTextFile} from '@tauri-apps/api/fs';
     import {codeStore} from '../stores';
     import {Icon} from "$lib";
+    import {getToastStore, type ToastSettings} from '@skeletonlabs/skeleton';
+
+    const toastStore = getToastStore();
 
     async function saveFile() {
         try {
             await writeTextFile(`foo.kts`, $codeStore, {dir: BaseDirectory.Desktop});
+
+            const t: ToastSettings = {
+                message: 'Successfully saved file to the desktop/foo.kts!',
+                hideDismiss: true,
+                timeout: 1500,
+                background: 'bg-green-500',
+                classes: 'text-white'
+            };
+            toastStore.trigger(t);
         } catch (e) {
             console.error(e)
         }

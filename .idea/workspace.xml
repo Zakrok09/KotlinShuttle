@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: advanced layout">
-      <change afterPath="$PROJECT_DIR$/ks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/stores.ts" afterDir="false" />
+    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: saving to desktop">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-tauri/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/src/main.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-tauri/tauri.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/tauri.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/CodeEditor.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/CodeEditor.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/components/SideBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SideBar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703835743926</updated>
       <workItem from="1703835744797" duration="1238000" />
-      <workItem from="1703837060157" duration="13910000" />
+      <workItem from="1703837060157" duration="14635000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial commit">
       <option name="closed" value="true" />
@@ -150,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703846707641</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: saving to desktop">
+      <option name="closed" value="true" />
+      <created>1703852562238</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1703852562238</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +179,7 @@
     <MESSAGE value="chore: set description in Cargo.toml" />
     <MESSAGE value="feat: basic layout" />
     <MESSAGE value="feat: advanced layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: advanced layout" />
+    <MESSAGE value="feat: saving to desktop" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: saving to desktop" />
   </component>
 </project>

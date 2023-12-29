@@ -1,11 +1,13 @@
 <script lang="ts">
     import {Icon} from "$lib";
-
-	import '../app.postcss';
-
+    import {initializeStores, Toast} from '@skeletonlabs/skeleton';
+    import '../app.postcss';
     import { appWindow } from '@tauri-apps/api/window';
+
+    initializeStores();
 </script>
 
+<Toast />
 <div class="overflow-x-hidden overflow-y-hidden h-screen">
     <div data-tauri-drag-region class="w-screen flex flex-row p-1 items-center bg-[#1e1e1e] border-b-2 border-b-[#2d2d2d]">
         <div class="flex flex-row ml-auto gap-4">

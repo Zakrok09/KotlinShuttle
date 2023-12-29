@@ -37,6 +37,16 @@
       },
       "path": {
         "all": true
+      },
+      "shell": {
+        "sidecar": true,
+        "scope": [
+          {
+            "name": "kotlin-compile",
+            "cmd": "kotlinc",
+            "args": true
+          }
+        ]
       }
     },
     "bundle": {
