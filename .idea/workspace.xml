@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: saving to desktop">
+    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: toast when saving">
+      <change afterPath="$PROJECT_DIR$/src/lib/types/Output.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-tauri/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src-tauri/tauri.conf.json" beforeDir="false" afterPath="$PROJECT_DIR$/src-tauri/tauri.conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/SideBar.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/SideBar.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/OutputPane.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/OutputPane.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/stores.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/stores.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +116,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703835743926</updated>
       <workItem from="1703835744797" duration="1238000" />
-      <workItem from="1703837060157" duration="14635000" />
+      <workItem from="1703837060157" duration="16726000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial commit">
       <option name="closed" value="true" />
@@ -156,7 +158,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703852562238</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: toast when saving">
+      <option name="closed" value="true" />
+      <created>1703853213929</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703853213929</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +190,7 @@
     <MESSAGE value="feat: basic layout" />
     <MESSAGE value="feat: advanced layout" />
     <MESSAGE value="feat: saving to desktop" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: saving to desktop" />
+    <MESSAGE value="feat: toast when saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: toast when saving" />
   </component>
 </project>

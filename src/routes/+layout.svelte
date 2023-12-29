@@ -3,6 +3,20 @@
     import {initializeStores, Toast} from '@skeletonlabs/skeleton';
     import '../app.postcss';
     import { appWindow } from '@tauri-apps/api/window';
+    import { Command } from '@tauri-apps/api/shell'
+    import {path} from "@tauri-apps/api";
+    import {outputStore} from "$lib/stores";
+
+    async function compileScript() {
+        const desktopPath = await path.desktopDir();
+        const output = await new Command('kotlin-compile', ['-script', `${desktopPath}/foo.kts`]).execute();
+
+        if (output.stderr === '') {
+            outputStore.set({output: output.stdout, error: false});
+        } else {
+            outputStore.set({output: output.stderr, error: true});
+        }
+    }
 
     initializeStores();
 </script>
@@ -12,7 +26,7 @@
     <div data-tauri-drag-region class="w-screen flex flex-row p-1 items-center bg-[#1e1e1e] border-b-2 border-b-[#2d2d2d]">
         <div class="flex flex-row ml-auto gap-4">
             <div class="flex flex-row">
-                <button><Icon iconClass="fa-play" className="text-green-400 hover:bg-green-500" /></button>
+                <button on:click={compileScript}><Icon iconClass="fa-play" className="text-green-400 hover:bg-green-500" /></button>
                 <button><Icon iconClass="fa-stop" className="text-red-400 hover:bg-red-500" /></button>
             </div>
             <div class="flex flex-row">

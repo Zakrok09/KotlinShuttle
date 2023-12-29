@@ -1,9 +1,11 @@
 <script lang="ts">
-    let output = '';
+    import {outputStore} from '../stores';
 </script>
 
-<textarea bind:value={output}
-          class="w-full h-full p-4 font-mono editor" readonly />
+
+
+<textarea bind:value={$outputStore.output}
+          class="w-full h-full p-4 font-mono editor {$outputStore.error ? 'text-red-500' : ''}" readonly />
 
 <style>
     .editor {

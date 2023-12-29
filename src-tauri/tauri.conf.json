@@ -39,6 +39,8 @@
         "all": true
       },
       "shell": {
+        "execute": true,
+        "open": true,
         "sidecar": true,
         "scope": [
           {
