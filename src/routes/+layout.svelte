@@ -13,6 +13,8 @@
         let t: ToastSettings = {
             message: 'Compiling the file...',
             background: 'bg-blue-500',
+            hideDismiss: true,
+            autohide: false,
             classes: 'text-white'
         };
         let loadingToast = toastStore.trigger(t);

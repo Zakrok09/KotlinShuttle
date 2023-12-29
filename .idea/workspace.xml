@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: read and run file">
+    <list default="true" id="6f717367-1690-45b1-b5f7-cd9c9185ab34" name="Changes" comment="feat: toasts on compilation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
     </list>
@@ -110,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703835743926</updated>
       <workItem from="1703835744797" duration="1238000" />
-      <workItem from="1703837060157" duration="17193000" />
+      <workItem from="1703837060157" duration="17560000" />
     </task>
     <task id="LOCAL-00001" summary="chore: initial commit">
       <option name="closed" value="true" />
@@ -168,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1703855364442</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: toasts on compilation">
+      <option name="closed" value="true" />
+      <created>1703855769769</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703855769769</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +202,7 @@
     <MESSAGE value="feat: saving to desktop" />
     <MESSAGE value="feat: toast when saving" />
     <MESSAGE value="feat: read and run file" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: read and run file" />
+    <MESSAGE value="feat: toasts on compilation" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: toasts on compilation" />
   </component>
 </project>
