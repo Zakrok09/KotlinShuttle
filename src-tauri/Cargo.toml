@@ -1,7 +1,7 @@
 [package]
 name = "KotlinShuttle"
 version = "0.1.0"
-description = "Ed"
+description = "KotlinShuttle is a JetBrains-inspired GUI tool for local development of Swift and Kotlin. This project is an internship submission for the JetBrains internships for 2024. Design and icon is inspired by JetBrains. "
 authors = ["Zakrok09"]
 license = ""
 repository = ""
