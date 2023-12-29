@@ -1,13 +1,13 @@
 <script lang="ts">
-    let code = '';
+    import { codeStore } from '../stores';
 
     function handleInput(event: Event) {
         let target = event.target as HTMLInputElement;
-        code = target.value;
+        codeStore.set(target.value);
     }
 </script>
 
-<textarea bind:value={code} on:input={handleInput}
+<textarea on:input={handleInput}
           class="w-full h-full p-4 outline-none ring-0 font-mono editor" />
 
 <style>
