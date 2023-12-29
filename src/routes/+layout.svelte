@@ -1,24 +1,53 @@
 <script lang="ts">
     import {Icon} from "$lib";
-    import {initializeStores, Toast} from '@skeletonlabs/skeleton';
+    import {getToastStore, initializeStores, Toast, type ToastSettings} from '@skeletonlabs/skeleton';
     import '../app.postcss';
     import { appWindow } from '@tauri-apps/api/window';
     import { Command } from '@tauri-apps/api/shell'
     import {path} from "@tauri-apps/api";
     import {outputStore} from "$lib/stores";
+    initializeStores();
+    const toastStore = getToastStore();
 
     async function compileScript() {
+        let t: ToastSettings = {
+            message: 'Compiling the file...',
+            background: 'bg-blue-500',
+            classes: 'text-white'
+        };
+        let loadingToast = toastStore.trigger(t);
+
+
         const desktopPath = await path.desktopDir();
         const output = await new Command('kotlin-compile', ['-script', `${desktopPath}/foo.kts`]).execute();
 
+
         if (output.stderr === '') {
+            toastStore.close(loadingToast);
+
+            let tSuccess: ToastSettings = {
+                message: 'File ran successfully!',
+                hideDismiss: true,
+                timeout: 2000,
+                background: 'bg-green-500',
+                classes: 'text-white'
+            };
+            toastStore.trigger(tSuccess);
             outputStore.set({output: output.stdout, error: false});
         } else {
+            toastStore.close(loadingToast);
+
+            let tFailure: ToastSettings = {
+                message: 'Error when compiling!',
+                hideDismiss: true,
+                timeout: 2000,
+                background: 'bg-red-500',
+                classes: 'text-white'
+            };
+            toastStore.trigger(tFailure);
             outputStore.set({output: output.stderr, error: true});
         }
     }
-
-    initializeStores();
 </script>
 
 <Toast />
