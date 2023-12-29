@@ -33,7 +33,7 @@
         "removeFile": true,
         "renameFile": true,
         "exists": true,
-        "scope": ["$DESKTOP/*"]
+        "scope": ["$APPDATA/*"]
       },
       "path": {
         "all": true

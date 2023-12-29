@@ -5,7 +5,7 @@
     import { appWindow } from '@tauri-apps/api/window';
     import { Command } from '@tauri-apps/api/shell'
     import {path} from "@tauri-apps/api";
-    import {outputStore} from "$lib/stores";
+    import {lastSuccess, outputStore} from "$lib/stores";
     initializeStores();
     const toastStore = getToastStore();
 
@@ -22,7 +22,7 @@
         let loadingToast = toastStore.trigger(t);
 
 
-        const desktopPath = await path.desktopDir();
+        const desktopPath = await path.appDataDir();
         const command = new Command('kotlin-compile', ['-script', `${desktopPath}/foo.kts`]);
 
         command.on("close", () => {
@@ -47,8 +47,10 @@
 
             if ($outputStore.error) {
                 toastStore.trigger(tFailure);
+                lastSuccess.set(false);
             } else {
                 toastStore.trigger(tSuccess);
+                lastSuccess.set(true);
             }
         })
         command.on("error", (error) => {
@@ -60,6 +62,7 @@
                 background: 'bg-red-500',
                 classes: 'text-white'
             };
+            lastSuccess.set(false);
             toastStore.trigger(tFailure);
         })
         command.stdout.on("data", (line) => {
@@ -68,7 +71,7 @@
         })
         command.stderr.on("data", (line) => {
             let oldOutput = $outputStore.output;
-            outputStore.set({output: oldOutput + line, error: false});
+            outputStore.set({output: oldOutput + line, error: true});
         })
 
 
@@ -79,8 +82,13 @@
 
 <Toast />
 <div class="overflow-x-hidden overflow-y-hidden h-screen">
-    <div data-tauri-drag-region class="w-screen flex flex-row p-1 items-center bg-[#1e1e1e] border-b-2 border-b-[#2d2d2d]">
-        <div class="flex flex-row ml-auto gap-4">
+    <div data-tauri-drag-region class="w-screen align-baseline flex flex-row p-1 items-center bg-[#1e1e1e] border-b-2 border-b-[#2d2d2d]">
+        <div class="flex flex-row align-baseline ml-auto gap-4">
+            {#if $lastSuccess}
+                <span class="text-green-400">✔</span>
+            {:else}
+                <span class="text-red-400">✘</span>
+            {/if}
             <div class="flex flex-row">
                 <button on:click={compileScript}><Icon iconClass="fa-play" className="text-green-400 hover:bg-green-500" /></button>
                 <button><Icon iconClass="fa-stop" className="text-red-400 hover:bg-red-500" /></button>

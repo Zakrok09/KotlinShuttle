@@ -8,7 +8,7 @@
 
     async function saveFile() {
         try {
-            await writeTextFile(`foo.kts`, $codeStore, {dir: BaseDirectory.Desktop});
+            await writeTextFile(`foo.kts`, $codeStore, {dir: BaseDirectory.AppData});
 
             const t: ToastSettings = {
                 message: 'Successfully saved file to the desktop/foo.kts!',
