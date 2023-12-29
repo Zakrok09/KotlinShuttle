@@ -10,6 +10,8 @@
     const toastStore = getToastStore();
 
     async function compileScript() {
+        outputStore.set({output: '', error: false});
+
         let t: ToastSettings = {
             message: 'Compiling the file...',
             background: 'bg-blue-500',
@@ -21,10 +23,10 @@
 
 
         const desktopPath = await path.desktopDir();
-        const output = await new Command('kotlin-compile', ['-script', `${desktopPath}/foo.kts`]).execute();
+        const command = new Command('kotlin-compile', ['-script', `${desktopPath}/foo.kts`]);
 
-
-        if (output.stderr === '') {
+        command.on("close", () => {
+            console.log("Child closed")
             toastStore.close(loadingToast);
 
             let tSuccess: ToastSettings = {
@@ -34,10 +36,6 @@
                 background: 'bg-green-500',
                 classes: 'text-white'
             };
-            toastStore.trigger(tSuccess);
-            outputStore.set({output: output.stdout, error: false});
-        } else {
-            toastStore.close(loadingToast);
 
             let tFailure: ToastSettings = {
                 message: 'Error when compiling!',
@@ -46,9 +44,36 @@
                 background: 'bg-red-500',
                 classes: 'text-white'
             };
+
+            if ($outputStore.error) {
+                toastStore.trigger(tFailure);
+            } else {
+                toastStore.trigger(tSuccess);
+            }
+        })
+        command.on("error", (error) => {
+
+            let tFailure: ToastSettings = {
+                message: `Error when executing! ${error}`,
+                hideDismiss: true,
+                timeout: 2000,
+                background: 'bg-red-500',
+                classes: 'text-white'
+            };
             toastStore.trigger(tFailure);
-            outputStore.set({output: output.stderr, error: true});
-        }
+        })
+        command.stdout.on("data", (line) => {
+            let oldOutput = $outputStore.output;
+            outputStore.set({output: oldOutput + line, error: false});
+        })
+        command.stderr.on("data", (line) => {
+            let oldOutput = $outputStore.output;
+            outputStore.set({output: oldOutput + line, error: false});
+        })
+
+
+        await command.spawn();
+
     }
 </script>
 

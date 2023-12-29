@@ -4,8 +4,9 @@
 
 
 
-<textarea bind:value={$outputStore.output}
-          class="w-full h-full p-4 font-mono editor {$outputStore.error ? 'text-red-500' : ''}" readonly />
+<pre class="w-full h-full p-4 font-mono editor {$outputStore.error ? 'text-red-500' : ''}">
+    {$outputStore.output}
+</pre>
 
 <style>
     .editor {
